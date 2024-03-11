@@ -14,30 +14,29 @@ rules.push(new holidayRules(14, "2024-03-16", "2024-03-18"));
 
     //main function
     async function main() {
-        
-        // while (true) {
-        //     const action = await chooseAction();
-        //     switch (action) {
-        //         case 'Add a new employee':
-        //         await addEmployee();
-        //         break;
-        //         case 'View a list of employees with their remaining holidays':
-        //         viewEmployees();
-        //         break;
-        //         case 'Submit a holiday request':
-        //         await submitHolidayRequest();
-        //         break;
-        //         case 'View a list of pending holiday requests':
-        //         viewPendingHolidayRequests();
-        //         break;
-        //         case 'Approve or reject a pending holiday request':
-        //         await approveRejectHolidayRequest();
-        //         break;
-        //         case 'Exit':
-        //         console.log('Goodbye!');
-        //         return;
-        //     }
-        // }
+        while (true) {
+            const action = await chooseAction();
+            switch (action) {
+                case 'Add a new employee':
+                await addEmployee();
+                break;
+                case 'View a list of employees with their remaining holidays':
+                viewEmployees();
+                break;
+                case 'Submit a holiday request':
+                await submitHolidayRequest();
+                break;
+                case 'View a list of pending holiday requests':
+                viewPendingHolidayRequests();
+                break;
+                case 'Approve or reject a pending holiday request':
+                await approveRejectHolidayRequest();
+                break;
+                case 'Exit':
+                console.log('Goodbye!');
+                return;
+            }
+        }
     }
 
     async function chooseAction(): Promise<string> {
